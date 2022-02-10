@@ -30,7 +30,7 @@
 </script>
 	
 	<head>
-		<title>Иван Крамской1</title>
+		<title>Иван Крамской</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<!--[if lte IE 8]><script src="static/assets/js/html5shiv.js"></script><![endif]-->
@@ -110,11 +110,19 @@
 		<!-- Scripts -->
 			<!--[if lte IE 8]><script src="static/assets/js/respond.min.js"></script><![endif]-->
 			<script>
-				amplitude.getInstance().logEvent('twitter')
 				if ('addEventListener' in window) {
 					window.addEventListener('load', function() { document.body.className = document.body.className.replace(/\bis-loading\b/, ''); });
 					document.body.className += (navigator.userAgent.match(/(MSIE|rv:11\.0)/) ? ' is-ie' : '');
 				}
+				          const twitterLink = document.querySelector('.fa-twitter');
+          twitterLink.addEventListener('click', () => {
+          	amplitude.getInstance().logEvent('twitter')
+          })
+				          const instaLink = document.querySelector('.fa-instagram');
+          twitterLink.addEventListener('click', () => {
+          	amplitude.getInstance().logEvent('instagram')
+          })
+				
 			</script>
 
 	</body>
