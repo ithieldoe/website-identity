@@ -91,8 +91,8 @@
 						-->
 						<footer>
 							<ul class="icons">
-								<li><a href="#" class="fa-twitter">Twitter</a></li>
-								<li><a href="https://www.instagram.com/ivannikolaevichkramskoi/" class="fa-instagram">Instagram</a></li>
+								<li><a href="#" class="fa-twitter" onclick="amplitude.getInstance().logEvent('twitter')>Twitter</a></li>
+								<li><a href="https://www.instagram.com/ivannikolaevichkramskoi/ onclick="amplitude.getInstance().logEvent('instagram')" class="fa-instagram">Instagram</a></li>
 								<li><a href="#" class="fa-facebook">Facebook</a></li>
 							</ul>
 						</footer>
@@ -114,15 +114,6 @@
 					window.addEventListener('load', function() { document.body.className = document.body.className.replace(/\bis-loading\b/, ''); });
 					document.body.className += (navigator.userAgent.match(/(MSIE|rv:11\.0)/) ? ' is-ie' : '');
 				}
-				          const twitterLink = document.querySelector('.fa-twitter');
-          twitterLink.addEventListener('click', () => {
-          	amplitude.getInstance().logEvent('twitter')
-          })
-				          const instaLink = document.querySelector('.fa-instagram');
-          twitterLink.addEventListener('click', () => {
-          	amplitude.getInstance().logEvent('instagram')
-          })
-				
 			</script>
 
 	</body>
